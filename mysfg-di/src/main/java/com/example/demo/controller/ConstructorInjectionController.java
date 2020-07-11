@@ -4,7 +4,7 @@ import com.example.demo.services.GreetingService;
 
 public class ConstructorInjectionController {
 
-	public GreetingService greetingService;
+	private final GreetingService greetingService;
 
 	public ConstructorInjectionController(GreetingService greetingService) {
 		this.greetingService = greetingService;
