@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.example.demo.services.GreetingServiceImpl;
+import com.example.demo.services.ConstructorGreetingServiceImpl;
 
 class ConstructorInjectionControllerTest {
 
 	public ConstructorInjectionController controlle;
 	@BeforeEach
 	void setUp() throws Exception {
-		controlle = new ConstructorInjectionController(new GreetingServiceImpl());
+		controlle = new ConstructorInjectionController(new ConstructorGreetingServiceImpl());
 	}
 
 	@Test

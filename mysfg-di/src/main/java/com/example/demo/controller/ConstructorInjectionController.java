@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.example.demo.services.GreetingService;
@@ -11,7 +12,7 @@ public class ConstructorInjectionController {
 	private final GreetingService greetingService;
 
 	@Autowired
-	public ConstructorInjectionController(GreetingService greetingService) {
+	public ConstructorInjectionController(@Qualifier("constructorGreetingServiceImpl") GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
 	
